@@ -2,14 +2,14 @@
 [[ $# == 0 ]] && set -- *.flac
 for f; do
     if [[ $f == *.flac ]]; then
-        echo "converting $f"
+        #echo "converting $f"
         outfile=`echo $f | sed s/\.flac$/\.mp3/`
         avconv -v quiet -i "$f" -c:a libmp3lame -b:a 320k "$outfile" -y
         if [ $? -eq 0 ]; then
-            echo "wrote $outfile"
+            #echo "wrote $outfile"
             rm -f "$f"
         else
-            echo "failed"
+            echo "failed: $f"
         fi
     fi
 done
