@@ -27,8 +27,11 @@ function undim() {
 }
 
 #########################################
-# words
+# projects
 #########################################
 
+function pull_projects() {
+    for dir in $HOME/projects/*; do echo "pulling $dir" && git -C $dir pull; done
+}
 . ~/projects/words/aliases.bash
 
