@@ -9,6 +9,7 @@ alias setclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
 alias ea='vi ~/.bash_aliases && . ~/.bash_aliases'
 alias g='grep -E'
+alias ipy='ipython'
 
 
 #########################################
